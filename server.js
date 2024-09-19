@@ -11,7 +11,16 @@ const app = express();
 const port = 3000;
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve static files from the 'client/public' directory
+app.use(express.static(path.join(__dirname, 'Frontend', 'public')));
+
+
+// Serve static files from the 'client/src' directory
+app.use('/src', express.static(path.join(__dirname, 'Frontend', 'src')));
+
+// app.use(express.static(path.join(__dirname, './client')));
 
 
 // Parse URL-encoded bodies (as sent by HTML forms)
