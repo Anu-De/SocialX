@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login To SocialX</title>
+    <link rel="stylesheet" href="/client/src/css/styles.css">
+    <!-- <script defer src="bundle.js"></script> -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="logo">
+                <img src="/client/src/images/file.png" alt="image" width="250px">
+            </div>
+            <p>
+                SocialX helps you connect and share with the people in decentralized way in your life.
+            </p>
+        </div>
+        <div class="right">
+            <form id="login-form" action="/form" method="POST">
+                <h2>Login</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+                <button type="login">Login</button> <br>
+                <button type="connect_wallet">Connect Wallet</button>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>&copy; 2024 G Praveen Kumar Production. All rights reserved.</p>
+</footer>
+
+</html>
