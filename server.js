@@ -1,6 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const Web3 = require('web3');
 const path = require('path');
+const solc = require('solc');
 
 
 const app = express();
@@ -15,6 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname,'Frontend', 'public', 'login-form.html'));
+});
 
 
 app.listen(port, () => {
