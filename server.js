@@ -7,7 +7,7 @@ const app = express();
 const port = 3010;
 
 // Serve static files from the 'client/public' directory
-app.use(express.static(path.join(__dirname, 'client', 'public')));
+app.use('/public',express.static(path.join(__dirname, 'client', 'public')));
 
 
 // Serve static files from the 'client/src' directory
@@ -20,7 +20,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login-form.html'));
+    res.sendFile(path.join(__dirname,'client', 'public', 'login-form.html'));
 });
 
 

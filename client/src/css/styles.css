@@ -5,13 +5,13 @@
 
 body {
     box-sizing: border-box;
-    background-image: url(/client/src/images/bg1.jpg);
+    background-image: url(../images/bg1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     background-size: cover;
     height: 100vh;
-    /* background-color: #061a29; */
+    background-color: #061a29;
     overflow: hidden;
 
 
