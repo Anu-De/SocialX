@@ -8,97 +8,131 @@ body {
     background-image: url(../images/bg1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
     background-size: cover;
     height: 100vh;
-    background-color: #061a29;
     overflow: hidden;
-
-
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
-.main {
-    color: white;
+.form-container {
     display: flex;
-    flex-direction: row;
-    /* width: 80vw; */
-    margin: 100px;
-    padding: 40px;
     justify-content: space-between;
-
-
-}
-
-.left {
-    /* padding: 40px; */
+    align-items: center;
+    /* width: 800px;  */
+    padding: 20px;
+    margin: 100px;
     color: white;
-    margin: 60px;
 }
 
-.left > p{
+.text-container {
+    width: 40%; 
+    font-family: Arial, sans-serif;
     font-size: 40px;
-
-}
-
-.right {
+    font-weight: bolder;
     color: white;
-    padding: 40px;
-
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
     text-align: left;
 }
 
-form label {
-    font-size: 1.1em;
-    color: #fff;
-    /* display: block; */
-    margin-bottom: 10px;
+.form-content {
+    width: 55%;
 }
 
-form input {
-    width: 100%;
+.sign-in-title {
+    font-family: "Itim", cursive;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.sign-in-row{
+    width: 250px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fbtn {
+    color: #181d38;
+    background-color: white;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    background-color: #333;
-    opacity: 1;
-    color: white;
-
-}
-
-input::placeholder {
-    color: white;
-    /* font-weight: bold; */
-}
-
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
+    border: 2px solid #181d38;
+    border-radius: 20px;
+    margin: 8px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 10px;
+    width: 100%;
 }
 
-form button:hover {
-    background-color: rgb(16, 97, 130);
+.fbtn:hover {
+    background-color: #181d38;
+    color: white;
+}
+
+.or-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: 20px 0;
+}
+.login{
+    width: 400px;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #888;
+    margin: 0 10px;
+}
+
+.or-text {
+    padding: 0 10px;
+    color: #888;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 30px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sign-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
-    padding: 20px 0;
-    /* background-color: #061a29; */
-    color: white;
-    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    position: relative;
+    font-weight: 500;
+    /* background-color: #181d38; */
+    color: #fff;
+    font-family: "Itim", cursive;
+    margin-bottom: 0px;
+    padding: 5px;
 }

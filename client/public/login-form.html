@@ -5,38 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/styles.css">
-    <title>Login To SocialX</title>
-    <!-- <script defer src="bundle.js"></script> -->
-    <!-- <script src="https://apis.google.com/js/api:client.js"></script> -->
-    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+    <title>Login In SocialX</title>
 </head>
 
 <body>
-    <div class="main">
-        <div class="left">
-            <div class="logo">
-                <img src="../src/images/file.png" alt="image" width="250px">
-            </div>
+    <div class="form-container">
+        <div class="logo">
+
+        </div>
+        <div class="text-container">
+          <img src="../src/images/file.png" alt="images" width="200px">
+           
             <p>
-                SocialX helps you connect and share with the people in decentralized way in your life.
+
+                SocialX helps you connect and share with the people in your life in a decentralized way.
             </p>
         </div>
-        <div class="right">
-            <form id="login-form" action="/form" method="POST">
-                <h2>Login</h2>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <div class="form-content">
+            <form action="" method="POST">
+                <div class="sign-in-title">Sign In</div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                <div class="sign-in-row" style="display: flex; flex-direction: column; align-items: center;">
+                    <button class="fbtn" type="submit">Connect your wallet</button>
+                </div>
 
-                <button type="login">Login</button> <br>
-                <button type="connect_wallet">Connect Wallet</button>
+                <div class="or-container">
+                    <div class="line"></div>
+                    <div class="or-text">OR</div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="login">
+                    <label for="email">Username or Email</label>
+                    <input type="text" id="email" required>
+
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" required>
+                    <div class="sign-btn">
+                        <button class="fbtn" type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+    <footer>
+        G Praveen Kumar Production. &copy; 2024 All rights reserved. 
+    </footer>
 </body>
-<footer>
-    <p>&copy; 2024 G Praveen Kumar Production. All rights reserved.</p>
-</footer>
+
 
 </html>
