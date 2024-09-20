@@ -112,12 +112,16 @@ input {
     border: 1px solid #ccc;
     border-radius: 10px;
     width: 100%;
+    background-color: #333;
+    color: white;
     font-size: 15px;
     font-weight: 600;
     box-sizing: border-box;
     text-align: center;
 }
-
+input::placeholder{
+    color: white;
+}
 .sign-btn {
     display: flex;
     flex-direction: column;

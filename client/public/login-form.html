@@ -26,7 +26,7 @@
                 <div class="sign-in-title">Sign In</div>
 
                 <div class="sign-in-row" style="display: flex; flex-direction: column; align-items: center;">
-                    <button class="fbtn" type="submit">Connect your wallet</button>
+                    <button class="fbtn" id="connectButton" type="submit">Connect your wallet</button>
                 </div>
 
                 <div class="or-container">
@@ -37,20 +37,25 @@
 
                 <div class="login">
                     <label for="email">Username or Email</label>
-                    <input type="text" id="email" required>
+                    <input type="text" id="email" placeholder="email" required>
 
                     <label for="pass">Password</label>
-                    <input type="password" id="pass" required>
+                    <input type="password" id="pass" placeholder="Password" required>
                     <div class="sign-btn">
                         <button class="fbtn" type="submit">Login</button>
                     </div>
                 </div>
             </form>
+            <!-- Display connected wallet address here -->
+            <div id="walletDetails" style="margin-top: 20px; text-align: center;">
+                <p id="walletAddress"></p>
+            </div>
         </div>
     </div>
     <footer>
         G Praveen Kumar Production. &copy; 2024 All rights reserved. 
     </footer>
+    <script src="../src/js/login.js"></script>
 </body>
 
 

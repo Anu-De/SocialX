@@ -1,73 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import Web3 from 'web3';
-import { gapi } from 'gapi-script';
-import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+document.getElementById('connectButton').onclick = async () => {
+  console.log('Connect button clicked');
 
-const Login = ({ setUser }) => {
-  const [web3, setWeb3] = useState(null);
-  
-  // Google Client ID
-  const googleClientId = 'YOUR_GOOGLE_CLIENT_ID';
-  
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: googleClientId,
-        scope: 'email',
-      });
-    }
-    gapi.load('client:auth2', start);
-  }, []);
-
-  const handleMetaMaskLogin = async () => {
-    if (window.ethereum) {
+  if (typeof window.ethereum !== 'undefined') {
+      console.log('MetaMask is available');
       try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-        const web3 = new Web3(window.ethereum);
-        setWeb3(web3);
-        const accounts = await web3.eth.getAccounts();
-        setUser({ address: accounts[0] });
+          // Request account access if needed
+          const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+          console.log('Accounts:', accounts);
+
+          // We use ethers.js to create a provider
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          console.log('Provider created:', provider);
+
+          // Get the signer
+          const signer = provider.getSigner();
+          console.log('Signer:', signer);
+
+          // Get the user's Ethereum address
+          const address = await signer.getAddress();
+          console.log('Connected address:', address);
+
+          // Display the address or perform any other action you need
+          document.getElementById('walletAddress').innerText = 'Connected address: ' + address;
       } catch (error) {
-        console.error("MetaMask login failed:", error);
+          console.error('Error connecting to MetaMask:', error);
       }
-    } else {
-      alert("MetaMask is not installed. Please install it to use this feature.");
-    }
-  };
-
-  const handleGoogleLogin = () => {
-    const auth2 = gapi.auth2.getAuthInstance();
-    auth2.signIn().then(googleUser => {
-      const profile = googleUser.getBasicProfile();
-      setUser({ name: profile.getName(), email: profile.getEmail() });
-    }).catch(error => {
-      console.error("Google login failed:", error);
-    });
-  };
-
-  const handleFacebookLogin = (response) => {
-    if (response.status !== 'unknown') {
-      setUser({ name: response.name, email: response.email });
-    } else {
-      console.error("Facebook login failed:", response);
-    }
-  };
-
-  return (
-    <div className="login">
-      <h2>Login</h2>
-      <button onClick={handleMetaMaskLogin}>Login with MetaMask</button>
-      <button onClick={handleGoogleLogin}>Login with Google</button>
-      <FacebookLogin
-        appId="YOUR_FACEBOOK_APP_ID"
-        autoLoad={false}
-        callback={handleFacebookLogin}
-        render={renderProps => (
-          <button onClick={renderProps.onClick}>Login with Facebook</button>
-        )}
-      />
-    </div>
-  );
+  } else {
+      console.error('MetaMask is not installed!');
+      alert('Please install MetaMask!');
+  }
 };
-
-export default Login;
