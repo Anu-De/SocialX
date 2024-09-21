@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../src/css/profile.css">
 </head>
 <body>
-    
+    <div class="profile-container">
+        <div class="profile-header">
+            <img id="profile-picture" alt="Profile Picture" class="profile-picture">
+            <div class="profile-info">
+                <h1 id="profile-name" class="profile-name"></h1>
+                <p id="profile-bio" class="profile-bio"></p>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-stats">
+                <div class="stat">
+                    <span id="posts-number" class="stat-number"></span>
+                    <span class="stat-label">Posts</span>
+                </div>
+                <div class="stat">
+                    <span id="followers-number" class="stat-number"></span>
+                    <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat">
+                    <span id="following-number" class="stat-number"></span>
+                    <span class="stat-label">Following</span>
+                </div>
+            </div>
+            <div id="profile-posts" class="profile-posts">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="../src/js/profile.js"></script>
 </body>
 </html>
