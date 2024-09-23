@@ -1,0 +1,33 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.post-creation-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#post-form {
+    display: flex;
+    flex-direction: column;
+}
+#post-form input, #post-form button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#post-form button {
+    background-color: #0095f6;
+    color: white;
+    cursor: pointer;
+}
+#post-form button:hover {
+    background-color: #007bb5;
+} */
