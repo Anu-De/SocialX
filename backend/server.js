@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
 app.get('/profile', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/profile.html'));
 });
-// app.get('/createPost', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/public/profile.html'));
-// });
+app.get('/createPost', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/createPost.html'));
+});
 
 
 app.listen(port, () => {

@@ -1,4 +1,4 @@
-/* body {
+body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -30,4 +30,4 @@
 }
 #post-form button:hover {
     background-color: #007bb5;
-} */
+}
