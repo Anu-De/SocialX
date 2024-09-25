@@ -42,7 +42,6 @@ header {
     background-color: #333; /* Hover effect */
 }
 
-
 .logo {
     font-size: 24px;
     color: #00ffcc; /* Vibrant color */
@@ -149,6 +148,14 @@ button:hover {
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
 
 .actions {
     margin-top: 10px;
