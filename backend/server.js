@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/login-form.html'));
 });
 app.get('/profile', (req, res) => {
@@ -27,7 +27,7 @@ app.get('/profile', (req, res) => {
 app.get('/createPost', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/createPost.html'));
 });
-app.get('/main', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
 
