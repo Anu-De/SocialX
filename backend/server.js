@@ -52,6 +52,12 @@ app.get('/createPost', (req, res) => {
 app.get('/main', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
+app.get('/main', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/index.html'));
+});
+app.get('/reg', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/reg.html'));
+});
 
 app.post('/api/posts', upload.single('image'), (req, res) => {
     const { caption } = req.body;

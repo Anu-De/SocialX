@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const profileData = {
-        profilePicture: './src/images/bg1.jpg',
+        profilePicture: './src/images/1702191925337.jpg',
         name: 'John Doe',
         bio: 'Web Developer | Tech Enthusiast | Blogger'
     };
