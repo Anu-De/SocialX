@@ -1,3 +1,5 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -52,8 +54,24 @@ header {
     width: 300px;
     border: none;
     border-radius: 4px;
+    background-image: url(../images/search-removebg-preview.png);
+    background-size: 6%;
+    /* background-attachment: fixed; */
+
+
     background-color: #333;
     color: #fff;
+
+    /* width: 100%; */
+    /* box-sizing: border-box; */
+    /* border: 2px solid #ccc; */
+    /* border-radius: 4px; */
+    /* font-size: 16px; */
+    /* background-color: white; */
+    /* background-image: url('searchicon.png'); */
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
 }
 
 .nav-menu {

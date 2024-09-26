@@ -129,15 +129,44 @@ input {
     border-radius: 10px;
     width: 100%;
     background-color: #333;
-    color: white;
+    background-color: white;
+    /* color: white; */
+    color: #333;
+
     font-size: 15px;
     font-weight: 400;
     box-sizing: border-box;
     text-align: center;
 }
 input::placeholder{
-    color: white;
+    /* color: white; */
+    color: black;
+
 }
+
+#email::placeholder{
+    background-image: url(../images/user.png);
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    background-size: 3%;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+#pass::placeholder{
+    background-image: url(../images/padlock.png);
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    background-size: 3%;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
 .sign-btn {
     display: flex;
     flex-direction: column;
