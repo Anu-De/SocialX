@@ -4,6 +4,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
     background-color: #121212; /* Dark background */
     color: #e0e0e0; /* Light text color */
 }
@@ -136,8 +141,14 @@ button {
     margin-left: 10px;
     border: none;
     border-radius: 4px;
+<<<<<<< Updated upstream
     background-color: #76B952; /* Button color updated to green */
     color: white;
+=======
+    background-color: #00ffcc; /* Button color */
+    color: #333;
+    font-weight: bold;
+>>>>>>> Stashed changes
     cursor: pointer;
 }
 

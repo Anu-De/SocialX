@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialX - Messages</title>
+    <link rel="stylesheet" href="../src/css/message.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section - Contact List -->
+        <div class="contact-list">
+            <h2>Contacts</h2>
+            <div class="contact" data-name="John Doe">John Doe</div>
+            <div class="contact" data-name="Jane Smith">Jane Smith</div>
+            <div class="contact" data-name="Mike Johnson">Mike Johnson</div>
+            <div class="contact" data-name="Anna Williams">Anna Williams</div>
+        </div>
+
+        <!-- Right Section - Chat and Messages -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <h2 id="chat-name">John Doe</h2>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chat-messages">
+                <!-- John Doe's messages by default -->
+                <div class="message received">
+                    <p>Hey, how are you?</p>
+                    <span class="timestamp">4:15 PM</span>
+                </div>
+                <div class="message sent">
+                    <p>I'm good! How about you?</p>
+                    <span class="timestamp">4:16 PM</span>
+                </div>
+                <div class="message received">
+                    <p>All good, thanks for asking.</p>
+                    <span class="timestamp">4:17 PM</span>
+                </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="message-input">
+                <input type="text" placeholder="Type a message..." id="message-input">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/js/message.js"></script>
+</body>
+</html>
