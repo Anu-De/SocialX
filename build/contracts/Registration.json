@@ -21867,12 +21867,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x79A4FADea0f7731b2bCAa71b91Cf2E1C33540dD4",
-      "transactionHash": "0x4812fc88750a98941bd4e0da57ca6d7eef00d2533efbf2a3b60246654f41639b"
+      "address": "0xfD2cCc5d6ebFCB5f97f786B4940702e2050194c5",
+      "transactionHash": "0x73dba56cd65d4349e71191820bbb67aac26b0ebb9457abdf337e6624268dcb1c"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-09-27T19:46:31.312Z",
+  "updatedAt": "2024-09-27T21:01:17.263Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
