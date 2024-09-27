@@ -109,7 +109,7 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #E35388; /* Updated to pink */
+    color: #00ffcc; 
 }
 
 .left-sidebar li:hover, .right-sidebar li:hover {
