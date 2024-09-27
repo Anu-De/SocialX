@@ -121,15 +121,7 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #00ffcc; /* Updated to pink */
-}
-.left-sidebar li, .right-sidebar li, a {
-    /* padding: 10px; */
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    color: #00ffcc; /* Updated to pink */
+    color: #E35388; /* Updated to pink */
 }
 
 .left-sidebar li:hover, .right-sidebar li:hover {
