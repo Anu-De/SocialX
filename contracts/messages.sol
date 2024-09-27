@@ -62,4 +62,13 @@ contract Messages {
     function getLastMessageTime(address _user) public view returns (uint256) {
         return lastMessageTime[_user];
     }
+
+    function getSenderDetails() public view returns (uint256, string memory, string memory, string memory, uint256) {
+        return registrationContract.getUserDetails(msg.sender); // Get details of the sender
+    }
+
+    // Getter function to retrieve user details from Registration contract for the receiver
+    function getReceiverDetails(address _receiver) public view returns (uint256, string memory, string memory, string memory, uint256) {
+        return registrationContract.getUserDetails(_receiver); // Get details of the receiver
+    }
 }
