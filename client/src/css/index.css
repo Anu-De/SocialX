@@ -41,6 +41,7 @@ header {
     /* padding: 10px; */
     /* border-radius: 4px; */
     /* margin-bottom: 10px; */
+    text-decoration: none;
     display: flex;
     text-align: center; /* Center the title text */
     align-items: center;
@@ -101,6 +102,10 @@ header {
     background-color: #1e1e1e; /* Sidebar background */
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+a{
+    text-decoration: none;
+    color: #00ffcc;
 }
 
 .left-sidebar {
