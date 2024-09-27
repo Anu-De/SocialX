@@ -4,8 +4,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
 }
 
 .container {
@@ -45,11 +51,16 @@ button {
     font-size: 16px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #333;
     color: #fff;
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 button:hover {
-    background-color: #0056b3;
+    background-color: #333333cb;
 }
