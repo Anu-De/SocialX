@@ -23,7 +23,7 @@ header {
     padding: 10px 20px;
 }
 .section-title {
-    background-color: #00ffcc; /* Title background color */
+    background-color: #76B952; /* Updated to green */
     color: #121212; /* Title text color */
     padding: 10px;
     border-radius: 4px;
@@ -46,7 +46,7 @@ header {
 
 .logo {
     font-size: 24px;
-    color: #00ffcc; /* Vibrant color */
+    color: #76B952; /* Updated to green */
 }
 
 .search-bar {
@@ -56,19 +56,8 @@ header {
     border-radius: 4px;
     background-image: url(../images/search-removebg-preview.png);
     background-size: 6%;
-    /* background-attachment: fixed; */
-
-
     background-color: #333;
     color: #fff;
-
-    /* width: 100%; */
-    /* box-sizing: border-box; */
-    /* border: 2px solid #ccc; */
-    /* border-radius: 4px; */
-    /* font-size: 16px; */
-    /* background-color: white; */
-    /* background-image: url('searchicon.png'); */
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -115,6 +104,7 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: #E35388; /* Updated to pink */
 }
 
 .left-sidebar li:hover, .right-sidebar li:hover {
@@ -146,13 +136,13 @@ button {
     margin-left: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #00ffcc; /* Button color */
+    background-color: #76B952; /* Button color updated to green */
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #00cc99; /* Button hover color */
+    background-color: #5E9944; /* Button hover color */
 }
 
 .posts {
@@ -173,7 +163,6 @@ button:hover {
     display: block;
     margin-top: 10px;
 }
-
 
 .actions {
     margin-top: 10px;
@@ -198,9 +187,9 @@ button:hover {
 
 .tag-submit {
     margin-left: 5px;
-    background-color: #00ffcc; /* Tag button color */
+    background-color: #76B952; /* Tag button color updated to green */
 }
 
 .tag-submit:hover {
-    background-color: #00cc99; /* Tag button hover color */
+    background-color: #5E9944; /* Tag button hover color */
 }
