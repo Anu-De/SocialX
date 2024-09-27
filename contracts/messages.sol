@@ -21,6 +21,13 @@ contract Messages {
     mapping(address => uint256) public lastMessageTime; 
     uint256 public messageCooldown = 5 seconds; // Cooldown time for sending messages
 
+    // Mapping to store contacts for each user
+    mapping(address => mapping(address => bool)) private contacts; // sender => receiver => added (true/false)
+    
+    // Event to notify when a contact is added or removed
+    event ContactAdded(address indexed user, address indexed contact);
+    event ContactRemoved(address indexed user, address indexed contact);
+
     event MessageSent(address indexed sender, address indexed receiver, bytes32 content, uint256 timestamp);
 
     constructor(address _registrationContract) {
@@ -63,6 +70,31 @@ contract Messages {
         return lastMessageTime[_user];
     }
 
+    // Add a contact to the user's contact list
+    function addContact(address _contact) public {
+        require(registrationContract.getUserDetails(_contact) != (0, "", "", "", 0), "Contact must be a registered user.");
+        require(!contacts[msg.sender][_contact], "This contact is already added.");
+
+        contacts[msg.sender][_contact] = true;
+
+        emit ContactAdded(msg.sender, _contact); // Emit event for adding contact
+    }
+
+    // Remove a contact from the user's contact list
+    function removeContact(address _contact) public {
+        require(contacts[msg.sender][_contact], "This contact is not in your contact list.");
+
+        contacts[msg.sender][_contact] = false;
+
+        emit ContactRemoved(msg.sender, _contact); // Emit event for removing contact
+    }
+
+    // Function to check if an address is a contact
+    function isContact(address _user, address _contact) public view returns (bool) {
+        return contacts[_user][_contact];
+    }
+
+    // Function to get sender details
     function getSenderDetails() public view returns (uint256, string memory, string memory, string memory, uint256) {
         return registrationContract.getUserDetails(msg.sender); // Get details of the sender
     }
