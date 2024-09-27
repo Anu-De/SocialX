@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Web Page</title>
+    <link rel="stylesheet" href="../src/css/spaces.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section - Community List and Header -->
+        <div class="left-section">
+            <div class="header">
+                <h2>Communities</h2>
+                <button id="add-community-btn">+ Add Community</button>
+            </div>
+            <div id="community-list">
+                <!-- Dynamically generated community profiles and names -->
+            </div>
+        </div>
+
+        <!-- Right Section - Chat Box and Community Interaction -->
+        <div class="right-section">
+            <!-- Header with exit, mute, archive, and add member -->
+            <div class="chat-header">
+                <h2 id="community-name">Select a Community</h2>
+                <div class="chat-options">
+                    <button id="exit-btn">Exit</button>
+                    <button id="mute-btn">Mute</button>
+                    <button id="archive-btn">Archive</button>
+                    <button id="add-member-btn">+ Add Member</button>
+                </div>
+            </div>
+
+            <!-- Members List (for selected community) -->
+            <div id="community-members" class="community-members">
+                <!-- Dynamically populated list of members -->
+            </div>
+
+            <!-- Messages -->
+            <div class="messages" id="community-messages">
+                <p>Select a community to start chatting</p>
+            </div>
+
+            <!-- Message Input Section -->
+            <div class="message-input">
+                <input type="text" placeholder="Type a message..." id="message-input" disabled>
+                <button id="send-btn" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/js/spaces.js"></script>
+</body>
+</html>

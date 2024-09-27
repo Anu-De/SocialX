@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #333;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 /* Left Section - Contact List */
 .contact-list {
     width: 25%;
-    background-color: #fff;
+    background-color: #333;
     border-right: 1px solid #ccc;
     padding: 20px;
     overflow-y: auto;
@@ -27,7 +27,7 @@ body {
 .contact-list h2 {
     margin-bottom: 20px;
     font-size: 20px;
-    color: #333;
+    color: whitesmoke;
 }
 
 .contact {
@@ -50,21 +50,21 @@ body {
 }
 
 .chat-header {
-    background-color: #fff;
+    background-color: #333;
     padding: 20px;
     border-bottom: 1px solid #ccc;
 }
 
 .chat-header h2 {
     font-size: 22px;
-    color: #333;
+    color: whitesmoke;
 }
 
 /* Chat Messages */
 .chat-messages {
     flex-grow: 1;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #333;
     overflow-y: auto;
 }
 
@@ -99,7 +99,7 @@ body {
 
 /* Message Input */
 .message-input {
-    background-color: #fff;
+    background-color: #333;
     padding: 10px;
     display: flex;
     border-top: 1px solid #ccc;
@@ -111,15 +111,24 @@ body {
     border: none;
     outline: none;
     border-radius: 20px;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 .message-input button {
     margin-left: 10px;
     padding: 10px 20px;
     border: none;
-    background-color: #007bff;
-    color: white;
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.message-input button:hover {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ccc;
+    color: black;
     border-radius: 20px;
     cursor: pointer;
 }

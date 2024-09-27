@@ -55,11 +55,15 @@ app.get('/main', (req, res) => {
 app.get('/main', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
+
 app.get('/reg', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/reg.html'));
 });
 app.get('/msg', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/message.html'));
+});
+app.get('/spaces', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/spaces.html'));
 });
 
 app.post('/api/posts', upload.single('image'), (req, res) => {
