@@ -17,7 +17,7 @@ document.getElementById('post-form').addEventListener('submit', async function(e
         if (response.ok) {
             alert('Post created successfully!');
             // Redirect to profile page after successful post creation
-            window.location.href = '/profile.html';
+            // window.location.href = '/profile.html';
         } else {
             alert('Failed to create post.');
         }

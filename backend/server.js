@@ -1,14 +1,51 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require("mongoose")
 const multer = require('multer');
 const fs = require('fs');
 
+
+mongoose.connect('mongodb://localhost:27017/SocialX');
 const app = express();
 const port = 3010;
 
 // In-memory storage for posts
 const posts = [];
 
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded({ extended: true }));
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
+
+const db = mongoose.connection;
+db.once('open', () => {
+    console.log('mongodb is connected');
+});
+
+const infoSchema = new mongoose.Schema({
+    email: String,
+    password: String
+   
+});
+
+
+const Info = mongoose.model('User_Info', infoSchema);
+
+app.post('/login', async(req,res)=>{
+    const {  email, password } = req.body;
+    const info = new Info({
+        email,
+        password
+    });
+    try {
+        await info.save();
+        console.log(info);
+        res.status(200).send('Form submitted successfully');
+    } catch (error) {
+        console.error('Error saving form data:', error);
+        res.status(500).send('Error submitting form');
+    }
+});
 // Ensure the uploads directory exists
 const uploadsDir = path.join(__dirname, '../client/public/uploads');
 if (!fs.existsSync(uploadsDir)) {
