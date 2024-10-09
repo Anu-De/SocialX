@@ -23,7 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1f1f1f; /* Darker header */
+    /* background-color: #1f1f1f; Darker header */
     color: #00ffcc;
     padding: 10px 20px;
 }
@@ -99,7 +99,7 @@ header {
 
 .left-sidebar, .right-sidebar {
     width: 250px; /* Adjusted width */
-    background-color: #1e1e1e; /* Sidebar background */
+    /* background-color: #1e1e1e; Sidebar background */
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }

@@ -11,7 +11,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    background-color: #333;
+    /* background-color: #333; */
 }
 
 .container {
@@ -23,7 +23,7 @@ body {
 /* Left Section - Contact List */
 .contact-list {
     width: 25%;
-    background-color: #333;
+    /* background-color: #333; */
     border-right: 1px solid #ccc;
     padding: 20px;
     overflow-y: auto;
@@ -59,7 +59,7 @@ body {
 }
 
 .chat-header {
-    background-color: #333;
+    /* background-color: #333; */
     padding: 20px;
     border-bottom: 1px solid #ccc;
 }
@@ -77,7 +77,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #333;
+    /* background-color: #333; */
     overflow-y: auto;
 }
 
@@ -112,7 +112,7 @@ body {
 
 /* Message Input */
 .message-input {
-    background-color: #333;
+    /* background-color: #333; */
     padding: 10px;
     display: flex;
     border-top: 1px solid #ccc;
